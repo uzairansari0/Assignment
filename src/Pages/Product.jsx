@@ -303,13 +303,13 @@ const Product = () => {
                       isBestSeller={flavor.bestSeller}
                       selected={
                         tryOnceType === "single"
-                          ? selectedFlavor === flavor.id
-                          : selectedFlavor1 === flavor.id
+                          ? selectedFlavor.id === flavor.id
+                          : selectedFlavor1.id === flavor.id
                       }
                       onChange={() => {
                         tryOnceType === "single"
-                          ? setSelectedFlavor(flavor.id)
-                          : setSelectedFlavor1(flavor.id);
+                          ? setSelectedFlavor(flavor)
+                          : setSelectedFlavor1(flavor);
                       }}
                       namePrefix="flavor1"
                     />
@@ -326,8 +326,8 @@ const Product = () => {
                           name={flavor.name}
                           image={flavor.image}
                           isBestSeller={flavor.bestSeller}
-                          selected={selectedFlavor2 === flavor.id}
-                          onChange={() => setSelectedFlavor2(flavor.id)}
+                          selected={selectedFlavor2.id === flavor}
+                          onChange={() => setSelectedFlavor2(flavor)}
                           namePrefix="flavor2"
                         />
                       ))}
