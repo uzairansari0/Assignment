@@ -326,7 +326,7 @@ const Product = () => {
                           name={flavor.name}
                           image={flavor.image}
                           isBestSeller={flavor.bestSeller}
-                          selected={selectedFlavor2.id === flavor}
+                          selected={selectedFlavor2.id === flavor.id}
                           onChange={() => setSelectedFlavor2(flavor)}
                           namePrefix="flavor2"
                         />
